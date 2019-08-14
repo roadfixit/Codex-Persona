@@ -1,0 +1,24 @@
+.grass{
+    color: #A7DB8D;
+  }
+  
+  .fire{
+    color:#F08030;
+  }
+  
+  .water{
+    color: #9DB7F5;
+  }
+  
+  .flying{
+    color:#C6C6A7;
+  }
+  
+  section{
+    margin-left:20px;
+    margin-right:20px;
+  }
+  
+  .list-group{
+    width:600px;
+  }

@@ -1,0 +1,29 @@
+[
+    {
+      "id": "getId()",
+      "Title": "The Bible",
+      "Author": "The Man Upstairs",
+      "ReleaseYear": "-1500",
+      "Description": "Most influential book ever written",
+      "Type": "Spirituality"
+
+    },
+    {
+        "id": "getId()",
+        "Title": "12 Rules for life",
+        "Author": "Jordan Peterson",
+        "ReleaseYear": "2018",
+        "Description": "Highest selling self-help book of all item",
+        "Type": "Self-help"
+  
+      },
+      {
+        "id": "getId()",
+        "Title": "Aurelia Fundamentals ",
+        "Author": "Bryan Noyes",
+        "ReleaseYear": "2016",
+        "Description": "Aurelia fundamentals on Pluralsight",
+        "Type": "Programming"
+  
+      }
+  ]
