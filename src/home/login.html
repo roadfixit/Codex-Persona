@@ -5,33 +5,37 @@
       <label><b>Email</b></label>
       <input class="form-control"
              placeholder="Enter your email adress"
-             value.bind="user.email">
+             value.bind="user.email & validateOnChange">
     </div>
 
     <div class="form-group">
       <label><b>Password</b></label>
-      <input class="form-control"
+      <input type="password" class="form-control"
              placeholder="Enter your password"
-             value.bind="user.password">
+             value.bind="user.password  & validateOnChange">
     </div>
 
 
     <div class="form-group">
       <label><b>Confirm password</b></label>
-      <input class="form-control"
+      <input type="password" class="form-control"
              placeholder="Enter your password again"
-             value.bind="user.confirmPassword">
+             value.bind="user.confirmPassword  & validateOnChange">
     </div>
 
+    <ul if.bind="controller.errors">
+        <li repeat.for="error of controller.errors">${ error.message }</li>
+      </ul>
 
     <div class="form-group">
       <button type="submit"
               click.delegate="login()"
               class="btn btn-success"
-              disabled.bind="!canLogin">Login</button>
+              disabled.bind="controller.errors.length > 0">Login</button>
 
       <a route-href="route: index"
          class="btn btn-danger">Cancel</a>
+
 
 
 
