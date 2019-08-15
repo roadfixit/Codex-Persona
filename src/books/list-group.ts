@@ -17,7 +17,6 @@ function makePartReplacementFromContent(viewCompiler, viewResources, element, be
     //note: In the latest version of aurelia this can be done in a cleaner way using DOM.createTemplateElement() method.
     const template = document.createElement('template');
     
-
     
     // indicate the part this <template> replaces.
     template.setAttribute('replace-part', 'item-template');
