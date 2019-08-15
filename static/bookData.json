@@ -1,6 +1,6 @@
 [
     {
-      "id": "getId()",
+      "id": "cd22cb56-88b3-4f0a-9d26-4ac03c535d00",
       "Title": "The Bible",
       "Author": "The Man Upstairs",
       "ReleaseYear": "-1500",
@@ -10,7 +10,7 @@
 
     },
     {
-        "id": "getId()",
+        "id": "25d8b67d-cc2c-4e7b-bf5e-df63237796fa",
         "Title": "12 Rules for life",
         "Author": "Jordan Peterson",
         "ReleaseYear": "2018",
@@ -19,7 +19,7 @@
         "imageSource": "https://i.ibb.co/CbDjDGv/iconfinder-book-285636-2.png"
       },
       {
-        "id": "getId()",
+        "id": "0d2c59bb-14c4-4491-80bf-b26b7eef490c",
         "Title": "Aurelia Fundamentals ",
         "Author": "Bryan Noyes",
         "ReleaseYear": "2016",

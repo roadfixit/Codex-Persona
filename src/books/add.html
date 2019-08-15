@@ -3,28 +3,28 @@
 
     <div class="form-group">
       <label ><b>Title</b></label>
-      <input class="form-control" placeholder="Enter a book title" value.bind="book.Title">
+      <input class="form-control" placeholder="Enter a book title" value.bind="book.Title & validateOnChange">
     </div>
 
     <div class="form-group">
       <label ><b>Author</b></label>
-      <input class="form-control" placeholder="Enter an author" value.bind="book.Author"> 
+      <input class="form-control" placeholder="Enter an author" value.bind="book.Author & validateOnChange"> 
     </div>
 
         <div class="form-group">
       <label ><b>ReleaseYear</b></label>
-      <input class="form-control" placeholder="Enter the release year" value.bind="book.ReleaseYear"> 
+      <input class="form-control" placeholder="Enter the release year" value.bind="book.ReleaseYear & validateOnChange"> 
     </div>
 
     <!-- will be made into a dropdown after I get around type functionality -->
     <div class="form-group">
         <label><b>Type</b></label>
-        <input class="form-control" placeholder="Enter a type" value.bind="book.Type"> 
+        <input class="form-control" placeholder="Enter a type" value.bind="book.Type & validateOnChange"> 
       </div> 
 
      <div class="form-group">
       <label><b>Description</b></label>
-      <textarea class="form-control" value.bind="book.Description" placeholder="Enter a book description.."></textarea>
+      <textarea class="form-control" value.bind="book.Description & validateOnChange" placeholder="Enter a book description.."></textarea>
     </div> 
 
   
@@ -36,7 +36,7 @@
 
 
       <div class="form-group">
-      <button type="submit" click.delegate="submit()" class="btn btn-success">Add book</button>
+      <button type="submit" click.delegate="submit()" class="btn btn-success" disabled.bind="controller.errors.length > 0">Add book</button>
       <a route-href="route: books" class="btn btn-danger">Cancel</a>
 
 
