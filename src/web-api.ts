@@ -42,7 +42,9 @@ export class WebAPI {
           Title:x.Title,
           Author:x.Author,
           Description:x.Description,
-          ReleaseYear:x.ReleaseYear
+          ReleaseYear:x.ReleaseYear,
+          Type: x.Type,
+          imageSource: x.imageSource
         }});
         resolve(results);
         this.isRequesting = false;

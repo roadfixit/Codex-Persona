@@ -1,30 +1,26 @@
 
 <template>
+    <require from="../books/style.css"></require>
+    <require from="../books/list-group"></require>
+    <require from="../books/book.html"></require>
 
-    <!-- <section class="au-animate">
-        <img src="images/main-logo.svg" class="pull-right">
-        <h2>${heading}</h2>
+    <section class="au-animate">
+        <img src="images/main-logo.svg" class="pull-left">
         <form role="form">
           <div class="form-group">
             <input type="text" value.bind="filterText" class="form-control" id="fn" placeholder="search...">
           </div>
         </form>
-      </section> -->
-
-    <section>
-        <h1>${message}</h1>
-        
-        <hr/>
-        <h3>custom template</h3>
-        <list-group items-source.bind="pokemonItems">
-          <pokemon model.bind="item"></pokemon>
-        </list-group>
-        
-        <hr/>
-        <h3>default template</h3>
-        <list-group items-source.bind="pokemonItems" 
-                    default-value.bind="defaultValue">
-        </list-group>
       </section>
+
+      <section>          
+          <hr/>
+          <h3>Books</h3>
+          <list-group items-source.bind="bookItems">
+            <book model.bind="item"></book>
+          </list-group>
+          
+        </section>
+        
 
   </template>
