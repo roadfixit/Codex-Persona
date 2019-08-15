@@ -1,0 +1,44 @@
+<template>
+  <form class="form-container">
+
+    <div class="form-group">
+      <label ><b>Title</b></label>
+      <input class="form-control" placeholder="Enter a book title" value.bind="book.Title">
+    </div>
+
+    <div class="form-group">
+      <label ><b>Author</b></label>
+      <input class="form-control" placeholder="Enter an author" value.bind="book.Author"> 
+    </div>
+
+        <div class="form-group">
+      <label ><b>ReleaseYear</b></label>
+      <input class="form-control" placeholder="Enter the release year" value.bind="book.ReleaseYear"> 
+    </div>
+
+    <!-- will be made into a dropdown after I get around type functionality -->
+    <div class="form-group">
+        <label><b>Type</b></label>
+        <input class="form-control" placeholder="Enter a type" value.bind="book.Type"> 
+      </div> 
+
+     <div class="form-group">
+      <label><b>Description</b></label>
+      <textarea class="form-control" value.bind="book.Description" placeholder="Enter a book description.."></textarea>
+    </div> 
+
+  
+
+  <!-- might be useful in the future
+  <div class="form-group">
+  <input class="form-control" type="hidden" value.bind="book.imageSource">
+  </div> -->
+
+
+      <div class="form-group">
+      <button type="submit" click.delegate="submit()" class="btn btn-success">Add book</button>
+      <a route-href="route: books" class="btn btn-danger">Cancel</a>
+
+
+  </form>
+</template>

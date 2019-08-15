@@ -1,5 +1,4 @@
 import { Router } from 'aurelia-router';
-import { WebAPI } from '../web-api';
 import { autoinject } from 'aurelia-framework';
 
 
@@ -21,22 +20,21 @@ export class register {
     users: any;
     user: User; 
     
-    constructor(private router: Router, private api: WebAPI) {
+    constructor(private router: Router) {
 
 
     }
 
-    activate(params){
+    activate(){
 
             this.users = JSON.parse(localStorage.getItem('Users'));
 }
 
 
-    register()
-    {
+    register(){
 
         const initialUsers  = this.users || [];
-        const registeredUsers = {
+        const finalUsers = {
             'id' : "getId()",
             'userName': this.user.name,
             'password' : this.user.password,
@@ -45,17 +43,10 @@ export class register {
 
         };
 
-        initialUsers.push(registeredUsers);
-         
+        initialUsers.push(finalUsers);
          localStorage.setItem('Users', JSON.stringify(initialUsers));
-         sessionStorage.setItem('Users', JSON.stringify(initialUsers));
-         this.create_cookie('Users', initialUsers);
          this.router.navigateToRoute("login");
 
     }
 
-    create_cookie(cname, cvalue) {
-
-        document.cookie = cname + "=" + JSON.stringify(cvalue) + ";" + ";path=/";
-      }
 }
