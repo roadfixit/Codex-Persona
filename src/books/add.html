@@ -27,6 +27,10 @@
       <textarea class="form-control" value.bind="book.Description & validateOnChange" placeholder="Enter a book description.."></textarea>
     </div> 
 
+    <ul if.bind="controller.errors">
+      <li repeat.for="error of controller.errors">${ error.message }</li>
+    </ul>
+
   
 
   <!-- might be useful in the future

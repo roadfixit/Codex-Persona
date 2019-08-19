@@ -2,13 +2,31 @@ import { Router } from 'aurelia-router';
 import { autoinject, observable } from 'aurelia-framework';
 
 
+
+interface Book {
+  id: string;
+  Title: string;
+  Author: string;
+  Description: string;
+  ReleaseYear: string;
+  Type: string;
+  imageSource: string;
+
+}
+
 @autoinject
 export class index {
   @observable searchValue;
   message;
-  listItems;
+  books: Book[]=[]; 
+  booksCached: Book[]=[]; 
   defaultValue;
   autocompletes;
+  listFound
+
+  //list found = care le gaseste; asta il faci null cand stergi, il golesti
+  //listItems - cachuite, si cu astea lucrezi tot timpu
+  //cand stergi sau cand adaugi caractere -> cauti in litItems => pui in listFound - in html vei afisa doar listFound. deci doar list found isi da update dinamic.
 
 
 
@@ -16,7 +34,8 @@ export class index {
   constructor(private router: Router) {
     this.message = 'Book library';
 
-    this.listItems = JSON.parse(localStorage.getItem('Books'));
+    this.books = JSON.parse(localStorage.getItem('Books'));
+    this.booksCached = this.books;
 
     this.defaultValue = model => model.Title;
 
@@ -28,16 +47,16 @@ export class index {
   }
 
   searchValueChanged(newval, oldval) {
-    const result = this.listItems;
+    const result = this.books;
     if (this.searchValue) {
       this.executeSearch();
       this.autocompletes = result.filter(x => x.Title.includes(newval));
 
-      } else {
+    } else {
 
       this.autocompletes = [];
-      this.listItems = [];
-      this.listItems = JSON.parse(localStorage.getItem('Books'));
+      this.books = [];
+      this.books = JSON.parse(localStorage.getItem('Books'));
     }
 
   }
@@ -47,21 +66,21 @@ export class index {
 
     if (this.searchValue) {
 
-      const sResults = this.listItems.find(x => x.Title.includes(this.searchValue));
-      if(sResults)
-      {
-        this.listItems = [];
-        this.listItems.push(sResults);
-  
+      const sResults = this.booksCached.filter(x => x.Title.includes(this.searchValue));
+      if (sResults) {
+        this.books = sResults;
+
+       
+
       } else {
-        this.listItems = [];
+        this.books = [];
       }
 
 
 
     } else {
-      this.listItems = [];
-      this.listItems = JSON.parse(localStorage.getItem('Books'));
+      this.books = [];
+      this.books = JSON.parse(localStorage.getItem('Books'));
     }
   }
 }
