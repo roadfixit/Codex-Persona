@@ -1,28 +1,47 @@
-
 <template>
-    <require from="../books/style.css"></require>
-    <require from="../books/list-group"></require>
-    <require from="../books/book.html"></require>
+  <require from="../books/style.css"></require>
+  <require from="../books/list-group"></require>
+  <require from="../books/book.html"></require>
+  <require from="../books/search.html"></require>
+  
 
-    <section class="au-animate">
-        <img src="images/main-logo.svg" class="pull-left">
-        <form role="form">
-          <div class="form-group">
-            <input type="text" value.bind="filterText" class="form-control" id="fn" placeholder="search...">
-          </div>
-        </form>
-      </section>
+  <section class="au-animate">
+    <img src="images/main-logo.svg"
+         class="pull-left">
+    <br />
+    <br />
+    
+    <div class="autocomplete">
+      <input type="search"
+      value.bind="searchValue & debounce:300"
+      type="text"
+      placeholder="Search for books.."
+      class="form-control mr-sm-2"
+      onchange.call="executeSearch()">
 
-      <section>          
-          <hr/>
-          <h3>Books</h3>
-          <list-group items-source.bind="bookItems">
-            <book model.bind="item"></book>
-          </list-group>
-          
-        </section>
-        <hr/>
-        <button class="btn btn-success float-left" click.delegate="add()">Add book</button>
-        
+      <ul>
+        <li repeat.for="autocomplete of autocompletes">
+          ${autocomplete.Title}
+        </li>
+      </ul>
+      </div>
 
-  </template>
+
+  </section>
+
+
+
+  <section>
+    <hr />
+    <h3>Books</h3>
+    <list-group items-source.bind="listItems">
+      <book model.bind="item"></book>
+    </list-group>
+
+  </section>
+  <hr />
+  <button class="btn btn-success float-left"
+          click.delegate="add()">Add book</button>
+
+
+</template>
