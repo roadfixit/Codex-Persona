@@ -38,7 +38,7 @@ export class register {
 
         ValidationRules
 
-            .ensure('Username')
+            .ensure('name')
             .required()
             .withMessage("Please enter an username")
 
@@ -64,6 +64,11 @@ export class register {
     activate() {
 
         this.users = JSON.parse(localStorage.getItem('Users'));
+    }
+
+    attached(){
+
+        this.controller.validate();
     }
 
     generateID() {

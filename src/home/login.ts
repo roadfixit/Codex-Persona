@@ -5,6 +5,7 @@ import { WebAPI } from '../web-api';
 
 
 let attempt = 3;
+let array = [{ disabled: true}, {disabled: false}]
 
 interface User {
     id: string;
@@ -61,7 +62,6 @@ export class login {
             .required()
             .withMessage("Please enter your password")
 
-
             .ensure('confirmPassword')
             .required()
             .withMessage("Please confirm your password")
@@ -69,11 +69,18 @@ export class login {
             .withMessage("Your passwords do not match!")
             .on(this.user);
 
+
+
     }
+    
+    attached(){
+
+        this.controller.validate();
+    }
+
 
     login() {
 
-        debugger
 
         const users = JSON.parse(localStorage.getItem('Users'));
         const loginUser = users.find(x => x.email == this.user.email);
@@ -107,6 +114,7 @@ export class login {
 
         } else {
             alert('Too many login attempts! Login disabled retry later')
+            this.canLogin();
 
         }
     }

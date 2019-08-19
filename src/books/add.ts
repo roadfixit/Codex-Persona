@@ -68,6 +68,11 @@ export class add {
         this.books = JSON.parse(localStorage.getItem('Books'));
     }
 
+    attached(){
+
+        this.controller.validate();
+    }
+
     submit() {
 
         const initialBooks = this.books || [];
