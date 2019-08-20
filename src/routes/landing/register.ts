@@ -1,7 +1,7 @@
 import { Router } from 'aurelia-router';
 import { autoinject } from 'aurelia-framework';
 import { ValidationRules, ValidationController } from 'aurelia-validation';
-import { WebAPI } from '../web-api';
+import { WebAPI } from '../../web-api';
 
 
 let attempt = 3;

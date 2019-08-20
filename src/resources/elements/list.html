@@ -1,0 +1,12 @@
+<template>
+    <require from="../../routes/books/book"></require>
+    <ul class="list-group">
+        <li repeat.for="item of value"
+            class="list-group-item ${item.id === $parent.selectedId ? 'active' : ''}">
+            <a route-href="route: books-detail ; params.bind: {id:item.id}"
+               click.delegate="$parent.select(item)">
+                <book model.bind="item"></book>
+            </a>
+        </li>
+    </ul>
+</template>

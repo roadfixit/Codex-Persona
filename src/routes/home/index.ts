@@ -1,9 +1,9 @@
 import { Router } from 'aurelia-router';
-import { WebAPI } from '../web-api';
+import { WebAPI } from '../../web-api';
 import { autoinject } from 'aurelia-framework';
 
 @autoinject
-export class home {
+export class Index {
 
     constructor(private router: Router, private api: WebAPI) {
 

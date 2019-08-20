@@ -1,30 +1,25 @@
 <template>
-  <require from="../books/style.css"></require>
-  <require from="../books/list-group"></require>
-  <require from="../books/book.html"></require>
-
-  
-
+  <require from="../../resources/CSS/style.css"</require>
   <section class="au-animate">
     <img src="images/main-logo.svg"
          class="pull-left">
     <br />
     <br />
-    
+
     <div class="autocomplete">
       <input type="search"
-      value.bind="searchValue & debounce:300"
-      type="text"
-      placeholder="Search for books.."
-      class="form-control mr-sm-2"
-      onchange.call="executeSearch()">
+             value.bind="searchValue & debounce:300"
+             type="text"
+             placeholder="Search for books.."
+             class="form-control mr-sm-2"
+             onchange.call="executeSearch()">
 
       <ul>
         <li repeat.for="autocomplete of autocompletes">
           ${autocomplete.Title}
         </li>
       </ul>
-      </div>
+    </div>
 
 
   </section>
@@ -34,14 +29,17 @@
   <section>
     <hr />
     <h3>Books</h3>
-    <list-group items-source.bind="books">
+    <list value.bind="books"></list>
+    <!-- <list-group items-source.bind="books">
       <book model.bind="item"></book>
-    </list-group>
+    </list-group> -->
 
   </section>
   <hr />
   <button class="btn btn-success float-left"
           click.delegate="add()">Add book</button>
+
+
 
 
 </template>

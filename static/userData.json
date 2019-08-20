@@ -4,8 +4,8 @@
       "userName": "admin",
       "password": "admin",
       "surName": "Mr.Admin",
-      "email": "admin@reyno.co.uk",
-      "RoleId": "0"
+      "email": "admin@reyno.co.uk"
+
 
     },
     {
@@ -13,8 +13,8 @@
       "userName": "user",
       "password": "user",
       "surName" : "John",
-      "email": "user@reyno.co.uk",
-      "RoleId": "1"
+      "email": "user@reyno.co.uk"
+
 
     }
   ]

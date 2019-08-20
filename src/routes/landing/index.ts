@@ -1,5 +1,5 @@
 import { Router } from 'aurelia-router';
-import { WebAPI } from '../web-api';
+import { WebAPI } from '../../web-api';
 import { autoinject } from 'aurelia-framework';
 
 interface User {
@@ -35,7 +35,7 @@ export class Index {
         const books = await this.api.getBooks();
         if (users && books) {
           this.users = users;
-          this.books =books;
+          this.books = books;
           if(localStorage.length == 0){
             console.log('Data have been loaded into localstorage')
             this.importUsers(); 

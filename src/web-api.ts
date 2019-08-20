@@ -39,14 +39,25 @@ export class WebAPI {
       setTimeout(() => {
         let results = books.map(x =>  { return {
           id:x.id,
-          Title:x.Title,
-          Author:x.Author,
-          Description:x.Description,
-          ReleaseYear:x.ReleaseYear,
-          Type: x.Type,
+          title:x.title,
+          author:x.author,
+          description:x.description,
+          releaseYear:x.releaseYear,
+          type: x.type,
           imageSource: x.imageSource
         }});
         resolve(results);
+        this.isRequesting = false;
+      }, latency);
+    });
+  }
+
+  getBookDetails(id){
+    this.isRequesting = true;
+    return new Promise(resolve => {
+      setTimeout(() => {
+        let found = books.filter(x => x.id == id)[0];
+        resolve(JSON.parse(JSON.stringify(found)));
         this.isRequesting = false;
       }, latency);
     });
