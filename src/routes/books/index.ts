@@ -5,11 +5,11 @@ import { autoinject, observable } from 'aurelia-framework';
 
 interface Book {
   id: string;
-  Title: string;
-  Author: string;
-  Description: string;
-  ReleaseYear: string;
-  Type: string;
+  title: string;
+  author: string;
+  description: string;
+  releaseYear: string;
+  type: string;
   imageSource: string;
 
 }
@@ -50,7 +50,7 @@ export class index {
     const result = this.books;
     if (this.searchValue) {
       this.executeSearch();
-      this.autocompletes = result.filter(x => x.Title.includes(newval));
+      this.autocompletes = result.filter(x => x.title.includes(newval));
 
     } else {
 
@@ -66,7 +66,7 @@ export class index {
 
     if (this.searchValue) {
 
-      const sResults = this.booksCached.filter(x => x.Title.includes(this.searchValue));
+      const sResults = this.booksCached.filter(x => x.title.includes(this.searchValue));
       if (sResults) {
         this.books = sResults;
 

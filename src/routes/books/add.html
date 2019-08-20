@@ -3,28 +3,28 @@
 
     <div class="form-group">
       <label ><b>Title</b></label>
-      <input class="form-control" placeholder="Enter a book title" value.bind="book.Title & validateOnChange">
+      <input class="form-control" placeholder="Enter a book title" value.bind="book.title & validateOnChange">
     </div>
 
     <div class="form-group">
       <label ><b>Author</b></label>
-      <input class="form-control" placeholder="Enter an author" value.bind="book.Author & validateOnChange"> 
+      <input class="form-control" placeholder="Enter an author" value.bind="book.author & validateOnChange"> 
     </div>
 
         <div class="form-group">
       <label ><b>ReleaseYear</b></label>
-      <input class="form-control" placeholder="Enter the release year" value.bind="book.ReleaseYear & validateOnChange"> 
+      <input class="form-control" placeholder="Enter the release year" value.bind="book.releaseYear & validateOnChange"> 
     </div>
 
     <!-- will be made into a dropdown after I get around type functionality -->
     <div class="form-group">
         <label><b>Type</b></label>
-        <input class="form-control" placeholder="Enter a type" value.bind="book.Type & validateOnChange"> 
+        <input class="form-control" placeholder="Enter a type" value.bind="book.type & validateOnChange"> 
       </div> 
 
      <div class="form-group">
       <label><b>Description</b></label>
-      <textarea class="form-control" value.bind="book.Description & validateOnChange" placeholder="Enter a book description.."></textarea>
+      <textarea class="form-control" value.bind="book.description & validateOnChange" placeholder="Enter a book description.."></textarea>
     </div> 
 
     <ul if.bind="controller.errors">

@@ -1,30 +1,30 @@
 [
     {
       "id": "cd22cb56-88b3-4f0a-9d26-4ac03c535d00",
-      "Title": "The Bible",
-      "Author": "The Man Upstairs",
-      "ReleaseYear": "-1500",
-      "Description": "Most influential book ever written",
-      "Type": "Spirituality",
+      "title": "The Bible",
+      "author": "The Man Upstairs",
+      "releaseYear": "-1500",
+      "description": "Most influential book ever written",
+      "type": "Spirituality",
       "imageSource": "https://i.ibb.co/CbDjDGv/iconfinder-book-285636-2.png"
 
     },
     {
         "id": "25d8b67d-cc2c-4e7b-bf5e-df63237796fa",
-        "Title": "12 Rules for life",
-        "Author": "Jordan Peterson",
-        "ReleaseYear": "2018",
-        "Description": "Highest selling self-help book of all item",
-        "Type": "Self-help",
+        "title": "12 Rules for life",
+        "author": "Jordan Peterson",
+        "releaseYear": "2018",
+        "description": "Highest selling self-help book of all item",
+        "type": "Self-help",
         "imageSource": "https://i.ibb.co/CbDjDGv/iconfinder-book-285636-2.png"
       },
       {
         "id": "0d2c59bb-14c4-4491-80bf-b26b7eef490c",
-        "Title": "Aurelia Fundamentals",
-        "Author": "Bryan Noyes",
-        "ReleaseYear": "2016",
-        "Description": "Aurelia fundamentals on Pluralsight",
-        "Type": "Programming",
+        "title": "Aurelia Fundamentals",
+        "author": "Bryan Noyes",
+        "releaseYear": "2016",
+        "description": "Aurelia fundamentals on Pluralsight",
+        "type": "Programming",
         "imageSource": "https://i.ibb.co/CbDjDGv/iconfinder-book-285636-2.png"
   
       }

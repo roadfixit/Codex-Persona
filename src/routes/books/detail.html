@@ -1,0 +1,65 @@
+<template>
+    <div class="form-group">
+        <h3>Book</h3>
+    </div>
+
+
+    <form class="form-container">
+        <div class="form-group">
+            <label class="col-sm-3 col-form-label">Title</label>
+            <div class="col-sm-9">
+                <input type="text"
+                       placeholder="Title"
+                       class="form-control"
+                       value.bind="book.title">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3 col-form-label">Author</label>
+            <div class="col-sm-9">
+                <input type="text"
+                       placeholder="Author"
+                       class="form-control"
+                       value.bind="book.author">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3 col-form-label">Release Year</label>
+            <div class="col-sm-9">
+                <input type="text"
+                       placeholder="Release Year"
+                       class="form-control"
+                       value.bind="book.releaseYear">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3 col-form-label">Type</label>
+            <div class="col-sm-9">
+                <input type="text"
+                       placeholder="Type"
+                       class="form-control"
+                       value.bind="book.type">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-3 col-form-label">Description</label>
+            <div class="col-sm-9">
+                <textarea class="form-control"
+                          value.bind="book.description"
+                          placeholder="Book description.."></textarea>
+
+            </div>
+        </div>
+
+    </form>
+    <div>
+        <button class="btn btn-success float-left"
+                click.delegate="save()">Save</button>
+    </div>
+    </div>
+    </div>
+</template>

@@ -1,13 +1,13 @@
-<template bindable="model">
+<template>
     <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1 ${model.Type}">${model.Title}</h5>
-      <small>${model.Type}</small>
+      <h5 class="mb-1 ${model.type}">${model.title}</h5>
+      <small>${model.type}</small>
     </div>
     <hr/>
     <div class="d-flex w-100 justify-content-between">
       <img src="${model.imageSource}"/> 
       <p class="mb-1">
-        ${model.Description}
+        ${model.description}
       </p>
     </div>
 </template>   

@@ -1,16 +1,16 @@
 import { Router } from 'aurelia-router';
 import { autoinject } from "aurelia-framework";
 import { ValidationRules, ValidationController } from 'aurelia-validation'
-import { WebAPI } from '../web-api';
+import { WebAPI } from '../../web-api';
 
 
 interface Book {
     id: string;
-    Title: string;
-    Author: string;
-    Description: string;
-    ReleaseYear: string;
-    Type: string;
+    title: string;
+    author: string;
+    description: string;
+    releaseYear: string;
+    type: string;
     imageSource: string;
 
 }
@@ -22,11 +22,11 @@ export class add {
     book: Book = {
 
         id: '',
-        Title: '',
-        Author: '',
-        Description: '',
-        ReleaseYear: '',
-        Type: '',
+        title: '',
+        author: '',
+        description: '',
+        releaseYear: '',
+        type: '',
         imageSource: ''
 
     };
@@ -78,17 +78,17 @@ export class add {
         const initialBooks = this.books || [];
         const finalBooks = {
             'id': this.api.generateID(),
-            'Title': this.book.Title,
-            'Author': this.book.Author,
-            'Description': this.book.Description,
-            'ReleaseYear': this.book.ReleaseYear,
-            'Type': this.book.Type,
+            'title': this.book.title,
+            'author': this.book.author,
+            'description': this.book.description,
+            'releaseYear': this.book.releaseYear,
+            'type': this.book.type,
             'imageSource': 'https://i.ibb.co/CbDjDGv/iconfinder-book-285636-2.png'
 
         };
 
-        const addedTitle = initialBooks.find(x => x.Title == this.book.Title);
-        const addedAuthor = initialBooks.find(x => x.Author == this.book.Author);
+        const addedTitle = initialBooks.find(x => x.title == this.book.title);
+        const addedAuthor = initialBooks.find(x => x.author == this.book.author);
 
         if (addedTitle && addedAuthor) {
             alert('Failure! - Book already exists in the database');
