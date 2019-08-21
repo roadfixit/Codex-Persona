@@ -4,7 +4,9 @@
       "userName": "admin",
       "password": "admin",
       "surName": "Mr.Admin",
-      "email": "admin@reyno.co.uk"
+      "email": "admin@reyno.co.uk",
+      "imageSource": "http://icons.iconarchive.com/icons/icons8/windows-8/64/Users-Administrator-icon.png"
+
 
 
     },
@@ -13,8 +15,26 @@
       "userName": "user",
       "password": "user",
       "surName" : "John",
-      "email": "user@reyno.co.uk"
+      "email": "user@reyno.co.uk",
+      "imageSource": "https://i.ibb.co/gJ2y0ZW/user.png"
 
+    },
+    {
+      "id": "31ce86dd-bb3e-4ef1-8f85-b9bf511fbe67",
+      "userName": "admin",
+      "password": "user1",
+      "surName" : "John",
+      "email": "user1@reyno.co.uk",
+      "imageSource": "https://i.ibb.co/gJ2y0ZW/user.png"
+
+    },
+    {
+      "id": "31ce86dd-bb3e-4ef1-8f85-b9bf511fbe67",
+      "userName": "user2",
+      "password": "user",
+      "surName" : "John",
+      "email": "user2@reyno.co.uk",
+      "imageSource": "https://i.ibb.co/gJ2y0ZW/user.png"
 
     }
   ]

@@ -17,29 +17,23 @@ interface Book {
 @autoinject
 export class index {
   @observable searchValue;
-  message;
   books: Book[]=[]; 
   booksCached: Book[]=[]; 
   defaultValue;
   autocompletes;
-  listFound
 
-  //list found = care le gaseste; asta il faci null cand stergi, il golesti
-  //listItems - cachuite, si cu astea lucrezi tot timpu
-  //cand stergi sau cand adaugi caractere -> cauti in litItems => pui in listFound - in html vei afisa doar listFound. deci doar list found isi da update dinamic.
+
 
 
 
 
   constructor(private router: Router) {
-    this.message = 'Book library';
 
     this.books = JSON.parse(localStorage.getItem('Books'));
     this.booksCached = this.books;
-
     this.defaultValue = model => model.Title;
-
     this.autocompletes = [];
+  
   }
 
   add() {

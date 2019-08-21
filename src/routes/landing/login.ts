@@ -14,6 +14,7 @@ interface User {
     confirmPassword: string;
     surName: string;
     email: string;
+    imageSource: string;
 
 }
 
@@ -27,7 +28,8 @@ export class login {
         password: '',
         confirmPassword: '',
         surName: '',
-        email: ''
+        email: '',
+        imageSource: ''
     };
 
 

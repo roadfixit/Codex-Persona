@@ -1,11 +1,13 @@
 <template>
     <require from="../../routes/books/book"></require>
+    <!-- <require from="../../routes/users/user"></require> -->
     <ul class="list-group">
         <li repeat.for="item of value"
             class="list-group-item ${item.id === $parent.selectedId ? 'active' : ''}">
             <a route-href="route: books-detail ; params.bind: {id:item.id}"
                click.delegate="$parent.select(item)">
                 <book model.bind="item"></book>
+                <!-- <user model.bind="item"></user> -->
             </a>
         </li>
     </ul>

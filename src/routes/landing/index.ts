@@ -37,7 +37,7 @@ export class Index {
           this.users = users;
           this.books = books;
           if(localStorage.length == 0){
-            console.log('Data have been loaded into localstorage')
+            console.log('Data has been loaded into localstorage')
             this.importUsers(); 
             this.importBooks();
           } else {

@@ -1,7 +1,8 @@
 <template>
-  <require from="../../resources/CSS/style.css"</require>
+  <require from="../../resources/CSS/style.css"></require>
+
   <section class="au-animate">
-    <img src="images/main-logo.svg"
+    <img src="../../resources/images/main-logo.svg"
          class="pull-left">
     <br />
     <br />
@@ -10,13 +11,13 @@
       <input type="search"
              value.bind="searchValue & debounce:300"
              type="text"
-             placeholder="Search for books.."
+             placeholder="Search for book title.."
              class="form-control mr-sm-2"
              onchange.call="executeSearch()">
 
       <ul>
         <li repeat.for="autocomplete of autocompletes">
-          ${autocomplete.Title}
+          ${autocomplete.title}
         </li>
       </ul>
     </div>
@@ -30,11 +31,8 @@
     <hr />
     <h3>Books</h3>
     <list value.bind="books"></list>
-    <!-- <list-group items-source.bind="books">
-      <book model.bind="item"></book>
-    </list-group> -->
-
   </section>
+
   <hr />
   <button class="btn btn-success float-left"
           click.delegate="add()">Add book</button>

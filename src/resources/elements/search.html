@@ -1,0 +1,19 @@
+<template>
+    
+    <div class="autocomplete">
+        <input type="search"
+               value.bind="searchValue & debounce:300"
+               type="text"
+               placeholder="Search for books.."
+               class="form-control mr-sm-2"
+               onchange.call="executeSearch()">
+  
+        <ul>
+          <li repeat.for="autocomplete of autocompletes">
+            ${autocomplete.Title}
+          </li>
+        </ul>
+      </div>
+
+
+</template>

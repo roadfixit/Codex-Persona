@@ -1,0 +1,29 @@
+<template>
+    <require from="../../resources/CSS/style.css"></require>
+
+    <section>
+        <div class="autocomplete">
+            <input type="search"
+                   value.bind="searchValue & debounce:300"
+                   type="text"
+                   placeholder="Search for username.."
+                   class="form-control mr-sm-2"
+                   onchange.call="executeSearch()">
+
+            <ul>
+                <li repeat.for="autocomplete of autocompletes">
+                    ${autocomplete.userName}
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section>
+        <hr />
+        <h3>Users</h3>
+        <list value.bind="users"></list>
+    </section>
+
+
+</template>
