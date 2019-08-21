@@ -18,7 +18,10 @@ export class App {
       { route: 'home', moduleId: PLATFORM.moduleName('./routes/home/index'), name: 'home' },
       { route: 'books', moduleId: PLATFORM.moduleName('./routes/books/index'), name: 'books' },
       { route: 'books/add', moduleId: PLATFORM.moduleName('./routes/books/add'), name: 'books-add' },
-      { route: 'books/detail/:id', moduleId: PLATFORM.moduleName('./routes/books/detail'), name: 'books-detail' }
+      { route: 'books/detail/:id', moduleId: PLATFORM.moduleName('./routes/books/detail'), name: 'books-detail' },
+      { route: 'users', moduleId: PLATFORM.moduleName('./routes/users/index'), name: 'users' },
+      { route: 'users/detail/:id', moduleId: PLATFORM.moduleName('./routes/users/detail'), name: 'users-detail' }
+
 
     ]);
 

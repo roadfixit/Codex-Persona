@@ -14,6 +14,7 @@ interface User {
     confirmPassword: string;
     surName: string;
     email: string;
+    imageSource: string;
 
 }
 
@@ -30,7 +31,8 @@ export class register {
         password: '',
         confirmPassword: '',
         surName: '',
-        email: ''
+        email: '',
+        imageSource: ''
     };
 
     constructor(private router: Router, private controller: ValidationController, private api: WebAPI) {
@@ -87,7 +89,8 @@ export class register {
             'userName': this.user.name,
             'password': this.user.password,
             'surName': this.user.surName,
-            'email': this.user.email
+            'email': this.user.email,
+            'imageSource': 'https://i.ibb.co/gJ2y0ZW/user.png'
 
         };
         const registeredEmail = initialUsers.find(x => x.email == this.user.email);

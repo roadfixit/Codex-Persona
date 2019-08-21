@@ -25,7 +25,8 @@ export class WebAPI {
           userName:x.userName,
           password:x.password,
           surName:x.surName,
-          email:x.email
+          email:x.email,
+          imageSource: x.imageSource
         }});
         resolve(results);
         this.isRequesting = false;
@@ -57,6 +58,17 @@ export class WebAPI {
     return new Promise(resolve => {
       setTimeout(() => {
         let found = books.filter(x => x.id == id)[0];
+        resolve(JSON.parse(JSON.stringify(found)));
+        this.isRequesting = false;
+      }, latency);
+    });
+  }
+
+  getUserDetails(id){
+    this.isRequesting = true;
+    return new Promise(resolve => {
+      setTimeout(() => {
+        let found = users.filter(x => x.id == id)[0];
         resolve(JSON.parse(JSON.stringify(found)));
         this.isRequesting = false;
       }, latency);

@@ -14,4 +14,8 @@ export class Index {
     books(){
         this.router.navigateToRoute("books");
     }
+
+    users(){
+        this.router.navigateToRoute("users");
+    }
 }
