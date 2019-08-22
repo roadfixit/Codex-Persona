@@ -26,6 +26,7 @@ export class WebAPI {
           password:x.password,
           surName:x.surName,
           email:x.email,
+          role:x.role,
           imageSource: x.imageSource
         }});
         resolve(results);
@@ -57,6 +58,7 @@ export class WebAPI {
     this.isRequesting = true;
     return new Promise(resolve => {
       setTimeout(() => {
+        let books = bookData;
         let found = books.filter(x => x.id == id)[0];
         resolve(JSON.parse(JSON.stringify(found)));
         this.isRequesting = false;

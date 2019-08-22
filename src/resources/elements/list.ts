@@ -1,14 +1,15 @@
-import {bindable, autoinject} from 'aurelia-framework';
+// import {bindable, autoinject} from 'aurelia-framework';
 
-@autoinject
-export class List {
-  @bindable value;
-  selectedId = 0;
+// @autoinject
+// export class List {
+//   @bindable value;
+//   @bindable root;
+//   selectedId = 0;
 
-  select(value) {
-    this.selectedId = value.id;
-    return true;
-  }
+//   select(value) {
+//     this.selectedId = value.id;
+//     return true;
+//   }
 
 
-}
+// }

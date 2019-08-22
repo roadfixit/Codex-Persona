@@ -1,6 +1,14 @@
 <template>
     <require from="../../resources/CSS/style.css"></require>
+    <require from="../../routes/users/list"></require>
 
+    <section class="au-animate">
+        <img src="../../resources/images/main-logo.svg"
+             class="pull-left">
+        <br />
+        <br />
+    </section>
+    
     <section>
         <div class="autocomplete">
             <input type="search"
@@ -24,6 +32,13 @@
         <h3>Users</h3>
         <list value.bind="users"></list>
     </section>
+
+    <hr />
+    <button class="btn btn-success float-left"
+            click.delegate="add()">Add user</button>
+  
+    <a route-href="route: home"
+       class="btn btn-danger">Cancel</a>
 
 
 </template>
