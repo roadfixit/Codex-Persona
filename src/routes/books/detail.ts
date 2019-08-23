@@ -1,11 +1,8 @@
-import { inject, autoinject } from 'aurelia-framework';
-import { WebAPI } from '../../web-api';
-import { Router } from 'aurelia-router';
-
-
+import { inject, autoinject } from "aurelia-framework";
+import { WebAPI } from "../../web-api";
+import { Router } from "aurelia-router";
 
 interface Book {
-
   id: string;
   title: string;
   author: string;
@@ -13,7 +10,6 @@ interface Book {
   releaseYear: string;
   type: string;
   imageSource: string;
-
 }
 
 @autoinject
@@ -21,21 +17,20 @@ export class detail {
   routeConfig;
   books: any;
   book: Book = {
-
-    id: '',
-    title: '',
-    author: '',
-    description: '',
-    releaseYear: '',
-    type: '',
-    imageSource: ''
+    id: "",
+    title: "",
+    author: "",
+    description: "",
+    releaseYear: "",
+    type: "",
+    imageSource: ""
   };
   originalBook: Book;
 
-  constructor(private router: Router, private api: WebAPI) { }
+  constructor(private router: Router, private api: WebAPI) {}
 
   activate(params, routeConfig) {
-
+  
     this.routeConfig = routeConfig;
 
     return this.api.getBookDetails(params.id).then(book => {
@@ -46,26 +41,12 @@ export class detail {
     });
   }
 
-
-
   save() {
-
-
     let saved = this.books.findIndex(x => x.id == this.book.id);
-    this.books.splice(saved, 1, this.book)
-    localStorage.setItem('Books', JSON.stringify(this.books));
+    this.books.splice(saved, 1, this.book);
+    localStorage.setItem("Books", JSON.stringify(this.books));
 
-    alert('Success! - you will be redirected towards the book list')
+    alert("Success! - you will be redirected towards the book list");
     this.router.navigateToRoute("books");
-
   }
-
-
-
-};
-
-
-
-
-
-
+}

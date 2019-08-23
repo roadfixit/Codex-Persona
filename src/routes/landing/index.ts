@@ -3,11 +3,14 @@ import { WebAPI } from '../../web-api';
 import { autoinject } from 'aurelia-framework';
 
 interface User {
-    id: number;
-    userName: string;
-    password: string;
-    surName: string;
-    email: string;
+  id: string;
+  name: string;
+  password: string;
+  confirmPassword: string;
+  surName: string;
+  email: string;
+  imageSource: string;
+
 
 }
 
@@ -47,7 +50,7 @@ export class Index {
         }
       }
 
-    // imports the users from our static JSON into local/session/cookies
+    // imports the users from our static JSON into local storage
 
     importUsers() {
 

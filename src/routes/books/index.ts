@@ -1,3 +1,4 @@
+import { WebAPI } from './../../web-api';
 import { Router } from 'aurelia-router';
 import { autoinject, observable } from 'aurelia-framework';
 
@@ -27,13 +28,17 @@ export class index {
 
 
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private api: WebAPI) {
 
     this.books = JSON.parse(localStorage.getItem('Books'));
     this.booksCached = this.books;
     this.defaultValue = model => model.Title;
     this.autocompletes = [];
   
+  }
+
+  async activate() {
+  this.api.getBooks();
   }
 
   add() {
