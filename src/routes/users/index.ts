@@ -8,6 +8,7 @@ interface User {
     password: string;
     surName: string;
     email: string;
+    roleId: string;
     imageSource: string;
   
   }
@@ -70,6 +71,11 @@ searchValueChanged(newval, oldval) {
           this.users = [];
           this.users = JSON.parse(localStorage.getItem('Users'));
         }
+      }
+
+      // work in progress
+      add(){
+
       }
 
   }
